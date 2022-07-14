@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu đa câp</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    body {
+        min-height: 100vh;
+        font-size: 20px;
+    }
+
+    .container {
+        width: 1212px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    header {
+        background-color: beige;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu>li>a {
+        display: inline-block;
+        padding: 10px 50px;
+    }
+
+    .menu>li {
+        position: relative;
+    }
+
+    .submenu__1 {
+        position: absolute;
+        left: 0;
+        background-color: antiquewhite;
+        display: none;
+        width: 240px;
+    }
+
+    .submenu__1>li>a {
+        display: inline-block;
+        margin: 20px;
+        height: 20px;
+    }
+
+    .submenu__1 {
+        margin-left: 40px;
+    }
+
+    .menu>li:hover .submenu__1 {
+        display: block;
+    }
+
+    .submenu__1>li:hover {
+        background-color: rgb(194, 194, 194);
+    }
+
+    /* //menu lv 2 */
+    .submenu__2 {
+        display: none;
+        position: absolute;
+        left: 240px;
+        width: 300px;
+        background-color: aquamarine;
+        margin-top: -60px;
+    }
+
+    .submenu__2>li>a {
+        display: inline-block;
+        margin: 20px;
+        height: 20px;
+    }
+
+    .submenu__1>li:hover .submenu__2 {
+        display: block;
+    }
+
+    .submenu__2>li:hover {
+        background: gray;
+    }
+
+    .submenu__3 {
+        display: none;
+        position: absolute;
+        left: 300px;
+        width: 300px;
+        background-color: rgb(226, 105, 105);
+        margin-top: -60px;
+    }
+
+    .submenu__3>li>a {
+        display: inline-block;
+        margin: 20px;
+        height: 20px;
+    }
+
+    .submenu__2>li:hover .submenu__3 {
+        display: block;
+    }
+
+    .submenu__3>li:hover {
+        background-color: yellow;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="container">
+            <ul class="menu">
+                <li><a href="">Trang chủ </a>
+                    <ul class="submenu__1">
+                        <li><a href="#">Trang chủ 1</a>
+                            <ul class="submenu__2">
+                                <li><a href="">menu cấp 3</a></li>
+                                <li><a href="">menu cấp 3</a></li>
+                                <li><a href="">menu cấp 3</a></li>
+                                <li><a href="">menu cấp 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Trang chủ 2</a>
+                            <ul class="submenu__2">
+                                <li><a href="">menu cấp 3-2</a>
+                                    <ul class="submenu__3">
+                                        <li><a href="">menu cấp 3-2</a></li>
+                                        <li><a href="">menu cấp 3</a></li>
+                                        <li><a href="">menu cấp 3</a></li>
+                                        <li><a href="">menu cấp 3</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">menu cấp 3</a></li>
+                                <li><a href="">menu cấp 3</a></li>
+                                <li><a href="">menu cấp 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Trang chủ 3</a></li>
+                        <li><a href="#">Trang chủ 4</a></li>
+                    </ul>
+                </li>
+                <li class=""><a href="#">Mặt hàng</a>
+                    <ul class="submenu__1">
+                        <li><a href="#">hàng 1</a></li>
+                        <li><a href="#">mặt hàng 2</a></li>
+                        <li><a href="#">mặt hàng 3</a></li>
+                        <li><a href="#">mặt hàng 4</a></li>
+                    </ul>
+
+                </li>
+                <li class=""><a href="#">Cửa hàng</a></li>
+                <li class=""><a href="#">CSKH</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main style="background-color: rgb(168, 160, 160); height: 500px"></main>
+</body>
+
+</html>

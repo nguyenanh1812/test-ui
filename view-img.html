@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View html</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(104, 94, 94);
+        min-height: 100vh;
+        overflow: hidden;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .container {
+        width: 1212px;
+        height: 603px;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid white;
+        width: 200px;
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    button {
+        position: absolute;
+        top: 150%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 100px;
+        height: 40px;
+        border: none;
+        outline: none;
+        transition: 0.4s all;
+        cursor: pointer;
+    }
+
+    .item:hover button {
+        top: 50%;
+    }
+    .show-img {
+        position: absolute;
+        width: 1150px;
+        height: 0px;
+        background-color: rgb(155, 120, 120, 0.95);
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        transition: 0.4s all;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .fas{
+        position: absolute;
+        color: white;
+        font-size: 30px;
+        top: 10px;
+        right: 10px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="item">
+            <img src="images/images.png" alt="">
+            <button>Xem ảnh</button>
+        </div>
+        <div class="item">
+            <img src="images/images_1.png" alt="">
+            <button>Xem ảnh</button>
+        </div>
+        <div class="item">
+            <img src="images/images_2.png" alt="">
+            <button>Xem ảnh</button>
+        </div>
+        <div class="item">
+            <img src="images/images_3.png" alt="">
+            <button>Xem ảnh</button>
+        </div>
+        <div class="item">
+            <img src="images/images_4.png" alt="">
+            <button>Xem ảnh</button>
+        </div>
+        <div class="item">
+            <img src="images/images_5.png" alt="">
+            <button>Xem ảnh</button>
+        </div>
+        <div class="item">
+            <img src="images/images_6.png" alt="">
+            <button>Xem ảnh</button>
+        </div>
+        <div class="item">
+            <img src="images/images_7.png" alt="">
+            <button>Xem ảnh</button>
+        </div>
+        <div class="item">
+            <img src="images/images_8.png" alt="">
+            <button>Xem ảnh</button>
+        </div>
+        <div class="item">
+            <img src="images/images_9.png" alt="">
+            <button>Xem ảnh</button>
+        </div>
+        <div class="item">
+            <img src="images/images_10.png" alt="">
+            <button>Xem ảnh</button>
+        </div>
+        <div class="item">
+            <img src="images/images_11.png" alt="">
+            <button>Xem ảnh</button>
+        </div>
+        <div class="item">
+            <img src="images/images_6.png" alt="">
+            <button>Xem ảnh</button>
+        </div>
+        <div class="item">
+            <img src="images/images_7.png" alt="">
+            <button>Xem ảnh</button>
+        </div>
+        <div class="item">
+            <img src="images/images_8.png" alt="">
+            <button>Xem ảnh</button>
+        </div>
+        <div class="item">
+            <img src="images/images_9.png" alt="">
+            <button>Xem ảnh</button>
+        </div>
+        <div class="item">
+            <img src="images/images_10.png" alt="">
+            <button>Xem ảnh</button>
+        </div>
+        <div class="item">
+            <img src="images/images_11.png" alt="">
+            <button>Xem ảnh</button>
+        </div>
+
+        <div class="show-img">
+            <div>
+                <img src="images/images.png" alt="" id="current-img">
+            </div>
+            <i class="fas fa-times"></i>
+        </div>
+    </div>
+</body>
+<script>
+    const buttons = document.querySelectorAll('.item button')
+    console.log(buttons)
+    const close = document.querySelector('.fas')
+    console.log(close)
+    buttons.forEach(button => {
+        button.addEventListener('click', function(event){
+            let image = event.target.previousElementSibling
+            console.log(image)
+            let currentImage = document.querySelector('#current-img')
+            currentImage.src = image.src
+            document.querySelector('.show-img').style.height = "630px"
+        })
+       
+    })
+
+    close.addEventListener('click', function(){
+        document.querySelector('.show-img').style.height = "0px"
+    })
+</script>
+</html>

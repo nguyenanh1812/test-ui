@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap');
+*{
+    padding:0;
+    margin:0;
+    font-family: 'Manrope', sans-serif;
+    box-sizing: border-box;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+body {
+    min-height: 100vh;
+    background:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width:600px;
+    height: 400px;
+    /* position:relative; */
+    display: flex;
+    justify-content: center;
+}
+
+.thumb {
+    width: 300px;
+    height: 400px;
+    z-index:1;
+    transition : 0.8s all;
+}
+
+.desc {
+    width: 300px;
+    height: 400px;
+    background:#0e1012;
+    transition: 0.8s all;
+    padding-top:20px;
+    position:absolute;
+}
+
+.desc h3 {
+    color:#1371ff;
+    text-align: center;
+    font-size:16px;
+}
+.desc .name,.desc .size {
+    font-weight: bold;
+    color:#a7a4a4;
+    font-size:20px;
+    margin-top:47px;
+    margin-left:46px;
+}
+
+.desc p {
+    margin-left:46px;
+    width:206px;
+    font-size:14px;
+    margin-top:6px;
+    color:#1371ff;
+}
+
+
+.list-size {
+    display: flex;
+    margin-left:46px;
+    gap:15px;
+    margin-top:23px;
+}
+
+.list-size .item {
+    width:28px;
+    height: 28px;
+    background:#ce0120;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:12px;
+}
+
+
+.other-info {
+    display: flex;
+    align-items: center;
+    margin-top:40px;
+}
+
+.price {
+    margin-left:46px;
+    margin-right:30px;
+    color:#fff;
+    font-weight: bold;
+}
+
+button {
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    background:linear-gradient(90deg,#16d9e3 0%,#30c7ec 47%,#46aef7 100%);
+    color:#fff;
+    outline:none;
+    border:none;
+}
+
+button:hover {
+    background:linear-gradient(90deg,#2af498 0%,#009efd 100%);
+}
+
+
+
+
+.card:hover .desc {
+    transform:translateX(150px);
+}
+.card:hover .thumb {
+    transform:translateX(-150px);
+}

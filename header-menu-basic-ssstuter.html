@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- slide carouse -->
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    body {
+        font-family: 'Rubik', sans-serif;
+    }
+
+    .container {
+        width: 1200px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    /* header */
+    header a {
+        font-size: 16px;
+        font-weight: 550;
+    }
+
+    .header__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5%;
+    }
+
+    .header__wrap--logo {
+        width: auto;
+    }
+
+    .header__wrap--mid ul,
+    .header__wrap--end ul {
+        display: flex;
+    }
+
+    .header__wrap--mid ul li {
+        margin: 0 10px;
+        padding: 0 15px;
+    }
+
+    .header__wrap--mid>ul>li {
+        position: relative;
+    }
+
+    .header__wrap--mid>ul>li::after {
+        position: absolute;
+        content: "";
+        top: 20px;
+        left: 0;
+        height: 2px;
+        background: black;
+        width: 0%;
+    }
+
+    .header__wrap--mid>ul>li:hover::after {
+        width: 100%;
+        transition: 0.7s;
+    }
+
+    .header__wrap--end i {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        height: 50px;
+        width: 50px;
+    }
+
+    .header__wrap--end i:hover {
+        background-color: rgba(241, 241, 241, 0.6);
+        border-radius: 5px;
+    }
+
+    .header-text {
+        display: none;
+    }
+
+    .nav-bars {
+        display: none;
+    }
+
+    .nav-bars-md {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: rgb(255, 255, 255, 0.9);
+        width: 100%;
+        height: 100%;
+    }
+
+    .nav-bars-md ul li {
+        padding: 15px 0;
+        padding-left: 30px;
+        border-bottom: 1px solid gray;
+    }
+
+    .nav-bars-md-caption {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 30px;
+        border-bottom: 1px solid gray;
+        background: white;
+    }
+
+    .nav-bars-md-caption i {
+        font-size: 30px
+    }
+
+    @media screen and (max-width: 768px) {
+
+        .header-text {
+            display: block;
+        }
+
+        .nav-bars {
+            display: block;
+        }
+
+        .header__wrap--mid ul {
+            display: none;
+        }
+
+        .d-md-none {
+            display: none;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <div class="header__wrap">
+            <div class="header__wrap--start">
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/Purple124/v4/98/4d/3f/984d3f69-b706-ec8b-e379-e2c5213894a3/source/60x60bb.jpg"
+                    alt="" class="header__wrap--logo d-md-none">
+                <div class="nav-bars">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="nav-bars-md">
+                    <div class="nav-bars-md-caption">
+                        <h2>SSSTUTTER</h2> <i class="fas fa-times"></i>
+                    </div>
+                    <ul>
+                        <li><a href="#">SALE NỬA GIÁ</a></li>
+                        <li><a href="#">NAM</a></li>
+                        <li><a href="#">NỮ</a></li>
+                        <li><a href="#">HELIANTHUS</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header__wrap--mid">
+                <ul>
+                    <li><a href="#">SALE NỬA GIÁ</a></li>
+                    <li><a href="#">NAM</a></li>
+                    <li><a href="#">NỮ</a></li>
+                    <li><a href="#">HELIANTHUS</a></li>
+                </ul>
+                <h2 class="header-text">SSSTUTTER</h2>
+            </div>
+            <div class="header__wrap--end">
+                <ul>
+                    <li><a href="#"><i class="fas fa-search"></i></a></li>
+                    <li class="d-md-none"><a href="#"><i class="far fa-heart"></i></a></li>
+                    <li><a href="#"><i class="fas fa-shopping-bag"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main style="background-color: yellow;height:500px">
+
+    </main>
+</body>
+<script>
+    document.querySelector('.fa-bars').addEventListener('click', function () {
+        document.querySelector(".nav-bars-md").style.display = "block";
+    })
+
+    document.querySelector('.fa-times').addEventListener('click', function () {
+        document.querySelector(".nav-bars-md").style.display = "none";
+    })
+</script>
+
+</html>
